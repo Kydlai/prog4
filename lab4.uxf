@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>650</x>
+      <y>10</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>/Abstract ProjectObject/
+bg=green
+--
+- name: String
+--
++ getName(): String
++ setName(String): void
++ equals(ProjectObject): boolean
++ toString(): String
++ hashCode(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>260</x>
+      <y>200</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>/Abstract People/
+bg=green
+--
+- backPack: BackPack
+- location: Locations
+--
++ getLocation(): Locations
++ setLocation(Locations): void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>360</y>
+      <w>270</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Person
+bg=green
+--
+- name: String
+- locations: Locations
+--
++ calculateProfit(Factory): void
++ improve(String): void
++ haveFun(Locations, String, String): void
++ getLocation(): Locations
++ getName(): String
++ setLocation(Locations): void
++ setName(String): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>360</y>
+      <w>190</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>Worker
+--
+- location: Locations
+- owner: ProjectObject
+- number: int
+- salary: int
+- AimDistanсe: int
+- Aim: Locations
+- backPack: BackPack
+- workerType: WorkersType
+--
++ goTo(Locations): void
++ getAim(): Locations
++ getAimDistanсe(): int
++ getLocation(): Locations
++ getBackPack(): BackPack
++ getOwner(): ProjectObject
++ getSalary(): int
++ getName(): String
++ setAimDistanсe(int): void
++ setOwner(ProjectObject): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>970</x>
+      <y>200</y>
+      <w>210</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>/Abstract Building/
+--
+- location: Locations
+- name: String
+- owner: ProjectObject
+- wareHouse: WareHouse
+--
++ report(): void
++ getLocation(): Locations
++ getName(): String
++ getWareHouse(): WareHouse
++ setLocation(Locations): void
++ setName(String): void 
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>670</x>
+      <y>200</y>
+      <w>170</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Item
+bg=green
+--
+- owner: Owner
+- name: String
+--
++ getName(): String
++ getOwner(): Owner
++ setName(String): void
++ setOwner(Owner): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1180</x>
+      <y>200</y>
+      <w>170</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>static Building.WareHouse
+--
+- items: Item[]
+- capacity: int
+- occupancy: int
+--
++ putOut(int): Item[]
++ putIn(Item...): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>130</y>
+      <w>90</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>130</y>
+      <w>220</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;70.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>850</x>
+      <y>130</y>
+      <w>140</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>120.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>290</y>
+      <w>90</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>290</y>
+      <w>90</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>670</x>
+      <y>490</y>
+      <w>260</w>
+      <h>450</h>
+    </coordinates>
+    <panel_attributes>Factory
+--
+- workers: Worker[]
+- workerProfit: int
+- maximumWorkers: int
+- owner: ProjectObject
+- name: String
+- locations: Locations
+- wareHouse: WareHouse
+- workersSalary: int
+- summaryExpenses: int
+- summaryProfit: int
+- price: int
+- workerDay: int
+--
++ addWorker(): void
++ addWorker(int): void
++ deleteWorker(): void
++ deleteWorker(int): void
++ doWork(Building): void
++ doWork(Building, int): void
++ getOwner(): ProjectObject
++ getWareHouse(): Building.WareHouse
++ getWorkerProfit(): int
++ report(): void
++ setOwner(ProjectObject): void
++ setWorkerProfit(): void
++ setWorkers(int): void
++ update(): Factory</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1070</x>
+      <y>390</y>
+      <w>90</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>970</x>
+      <y>490</y>
+      <w>220</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Home
+--
+- location: Locations
+- name: String
+- owner: ProjectObject
+- workers: Worker[]
+--
++ addWorkers(int): void
++ getOwner(): ProjectObject
++ setOwner(ProjecTObject): void
++ update(Locations, String): Home</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>920</x>
+      <y>390</y>
+      <w>110</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;100.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1230</x>
+      <y>490</y>
+      <w>260</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Restoraunt
+--
+- wareHouse: Building.WareHouse
+- locations: Locations
+--
++ getWareHouse(): Building.WareHouse</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1170</x>
+      <y>390</y>
+      <w>120</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>60.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>670</x>
+      <y>380</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Interface IHasOwner
+bg=green
+--
++ getOwner(): ProjectObject
++ setOwner(ProjectObject): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>320</y>
+      <w>110</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;impliments&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>430</y>
+      <w>110</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;impliments&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>550</x>
+      <y>390</y>
+      <w>140</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;impliments&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>730</y>
+      <w>190</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>enum Locations
+--
+BEACH
+CITY
+INDUSTRIAL_ZONE
+ROAD
+--
+- name: String
+--
++ toString(): String
++ valueOf(String): Locations
++ values(): Locations[]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>560</y>
+      <w>190</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>enum WorkersType
+--
+PORTER
+HANDYMAN
+SERVANT
+--
+- name: String
+--
++ toString(): String
++ valueOf(String): Locations
++ values(): Locations[]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>960</x>
+      <y>660</y>
+      <w>290</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>/Exception CounterOfWorkersExecption/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>960</x>
+      <y>700</y>
+      <w>290</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>/Exception NoOwnerExecption/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>960</x>
+      <y>740</y>
+      <w>290</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>/RuntimeException CanNotAddItemExecption/</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
